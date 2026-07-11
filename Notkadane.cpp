@@ -8,7 +8,7 @@ int Maxsubarrsum(vector<int>& nums) {
         int sum =nums[i]; //sum =0 if int j=i insted if int i=j+1
         for(int j=i+1; j<nums.size(); j++) {  //int j=i if sum=0 between the loops
             sum += nums[j];
-            if(sum>maxsum) {
+            if(sum>maxsum) { //here we can do maxsum = max(sum,maxsum); insted of this if condition. 
                 maxsum=sum;
             }
         }
