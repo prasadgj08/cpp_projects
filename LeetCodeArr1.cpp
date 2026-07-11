@@ -4,9 +4,10 @@ using namespace std;
 
 vector<int> twoSum(vector<int>& nums, int target) {
     for(int i=0; i<nums.size(); i++) {
-        for(int j=0; j<nums.size(); j++) {
+        for(int j=i+1; j<nums.size(); j++) {
             if(i!=j && nums[i]+nums[j]==target) {
-                return {i,j};
+                
+                cout<<i<<endl<<j<<endl;
             }
         }
     }
@@ -14,8 +15,8 @@ vector<int> twoSum(vector<int>& nums, int target) {
 }
 
 int main() {
-    vector<int> nums;
-    int target;
+    vector<int> nums={1,2,3,4,5,6,7};
+    int target=13;
     twoSum(nums, target);
     return 0;
 }
